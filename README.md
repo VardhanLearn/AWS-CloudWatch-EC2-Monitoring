@@ -199,7 +199,8 @@ pkill stress
 <img width="1854" height="705" alt="CustomEC2Monitoring" src="https://github.com/user-attachments/assets/0ddbcbbe-0f01-4a15-8dd6-0709df0cccaa" />
 <img width="1795" height="803" alt="BeforeLoad" src="https://github.com/user-attachments/assets/67cf71f4-9917-460e-a9e6-045375ccc009" />
 <img width="1795" height="803" alt="AfterLoad" src="https://github.com/user-attachments/assets/de2d3db3-b92c-427d-b5db-71acbff495b8" />
-![MailReceived](https://github.com/user-attachments/assets/74457168-37d1-4f6a-acd9-652690af8b80)
+<img width="348" height="681" alt="MailReceived 70" src="https://github.com/user-attachments/assets/a4ce2e7d-0ec9-46e6-97ef-bc167e5f8fa7" />
+
 
 
 
