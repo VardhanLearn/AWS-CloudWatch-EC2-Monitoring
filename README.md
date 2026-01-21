@@ -65,6 +65,7 @@ AWS Requirements
 
 🔹ssh -i cloudwatch.pem ubuntu@<EC2_PUBLIC_IP>
 
+---
 **Step 3: Install CloudWatch Agent**
 
 🔹sudo apt update -y
@@ -77,6 +78,7 @@ AWS Requirements
 wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 sudo dpkg -i amazon-cloudwatch-agent.deb
 
+---
 **Step 4: Create IAM Role for EC2 (Important)**
 
 🔹 Create an IAM role and attach:
@@ -184,16 +186,14 @@ pkill stress
 
 ✅ Future Enhancements
 
-Add Nginx/Apache access logs monitoring
-
-Use Terraform for Infrastructure provisioning
-
-Auto-deploy via Jenkins pipeline
-
-Add anomaly detection alarms
+🔹 Add Nginx/Apache access logs monitoring
+🔹 Use Terraform for Infrastructure provisioning
+🔹 Auto-deploy via Jenkins pipeline
+🔹 Add anomaly detection alarms
 
 ---
 👨‍💻 Author
 
-Vardhan Kandregula
-DevOps Engineer | AWS | CI/CD | Kubernetes | Monitoring
+⭐ Vardhan Kandregula
+
+⭐ DevOps Engineer | AWS | CI/CD | Kubernetes | Monitoring
