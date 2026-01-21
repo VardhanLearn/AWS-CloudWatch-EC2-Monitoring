@@ -194,6 +194,6 @@ pkill stress
 ---
 👨‍💻 Author
 
-⭐ Vardhan Kandregula
+⭐ **Vardhan Kandregula**
 
-⭐ DevOps Engineer | AWS | CI/CD | Kubernetes | Monitoring
+⭐ **DevOps Engineer | AWS | CI/CD | Kubernetes | Monitoring**
