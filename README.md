@@ -43,54 +43,36 @@ In real production environments, CloudWatch is used to:
 - Build dashboards for SRE/DevOps monitoring
 
 ---
-✅ Prerequisites
+✅ **Prerequisites**
 
 Before starting, ensure you have:
 
 AWS Requirements
 
-AWS Account
+🔹AWS Account |🔹IAM user permissions: 🔹EC2FullAccess |🔹CloudWatchFullAccess |🔹 SNSFullAccess |🔹IAMFullAccess |🔹Local Requirements | SSH Client .pem key pair downloaded |🔹Internet access
 
-IAM user permissions:
-
-EC2FullAccess
-
-CloudWatchFullAccess
-
-SNSFullAccess
-
-IAMFullAccess
-
-Local Requirements
-
-SSH Client
-
-.pem key pair downloaded
-
-Internet access
+---
 
 **🚀 Step-by-Step Deployment Guide**
 
 **Step 1: Launch EC2 Instance**
 
-🔹Launch an Ubuntu 22.04 EC2 instance:
-🔹AMI: Ubuntu 22.04
-🔹Instance Type: t2.micro
-🔹Enable inbound rule:
-🔹SSH (22) → My IP
+🔹Launch an Ubuntu 22.04 EC2 instance: |🔹AMI: Ubuntu 22.04 |🔹Instance Type: t2.micro |🔹Enable inbound rule: 🔹SSH (22) → My IP
 
 **Step 2: SSH into EC2**
 
 🔹chmod 400 cloudwatch.pem
+
 🔹ssh -i cloudwatch.pem ubuntu@<EC2_PUBLIC_IP>
 
 **Step 3: Install CloudWatch Agent**
 
 🔹sudo apt update -y
+
 🔹sudo apt install -y unzip wget
 
 
-Download & install:
+**Download & install:**
 
 wget https://amazoncloudwatch-agent.s3.amazonaws.com/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 sudo dpkg -i amazon-cloudwatch-agent.deb
@@ -98,18 +80,23 @@ sudo dpkg -i amazon-cloudwatch-agent.deb
 **Step 4: Create IAM Role for EC2 (Important)**
 
 🔹 Create an IAM role and attach:
+
 🔹 CloudWatchAgentServerPolicy
 
 🔵 **Role name**:
 
 🔹EC2CloudWatchAgentRole
+
 🔹Attach the role to the EC2 instance:
 
 **EC2 → Instance → Actions → Security → Modify IAM Role**
 
+---
+
 **Step 5: Create CloudWatch Agent Config File**
 
 Create the config directory:
+
 🔹sudo mkdir -p /opt/aws/amazon-cloudwatch-agent/etc/
 
 Create config file:
