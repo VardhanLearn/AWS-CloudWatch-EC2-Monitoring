@@ -202,9 +202,8 @@ pkill stress
 <img width="348" height="681" alt="MailReceived 70" src="https://github.com/user-attachments/assets/a4ce2e7d-0ec9-46e6-97ef-bc167e5f8fa7" />
 
 
-
-
-👨‍💻 Author
+---
+**👨‍💻 Author**
 
 ⭐ **Vardhan Kandregula**
 
