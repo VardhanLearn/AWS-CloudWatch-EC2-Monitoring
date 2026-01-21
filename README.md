@@ -192,6 +192,17 @@ pkill stress
 🔹 Add anomaly detection alarms
 
 ---
+
+<img width="1855" height="784" alt="InstanceRunning" src="https://github.com/user-attachments/assets/48527af3-e79a-4ddc-a994-ad733d644ace" />
+<img width="1854" height="783" alt="CloudwatchAlrams" src="https://github.com/user-attachments/assets/5baf8736-13c2-4daf-a4d8-67645f2eddd3" />
+<img width="1854" height="869" alt="CloudwatchLogs" src="https://github.com/user-attachments/assets/55f05ab6-a4e1-4e17-817f-44748083b504" />
+<img width="1854" height="705" alt="CustomEC2Monitoring" src="https://github.com/user-attachments/assets/0ddbcbbe-0f01-4a15-8dd6-0709df0cccaa" />
+<img width="1795" height="803" alt="BeforeLoad" src="https://github.com/user-attachments/assets/67cf71f4-9917-460e-a9e6-045375ccc009" />
+<img width="1795" height="803" alt="AfterLoad" src="https://github.com/user-attachments/assets/de2d3db3-b92c-427d-b5db-71acbff495b8" />
+![MailReceived](https://github.com/user-attachments/assets/74457168-37d1-4f6a-acd9-652690af8b80)
+
+
+
 👨‍💻 Author
 
 ⭐ **Vardhan Kandregula**
