@@ -100,5 +100,100 @@ Create the config directory:
 🔹sudo mkdir -p /opt/aws/amazon-cloudwatch-agent/etc/
 
 Create config file:
+
 🔹sudo nano /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json
 
+---
+**Step 6: Start CloudWatch Agent**
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
+-a fetch-config \
+-m ec2 \
+-c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json \
+-s
+
+**Check status:**
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+
+---
+**Step 7: Verify Metrics & Logs in AWS Console**
+
+🔹Go to:
+
+✅ CloudWatch → Metrics
+
+🔹Check namespace: CustomEC2Monitoring
+
+✅ CloudWatch → Logs → Log groups
+
+Confirm log group exists:
+
+🔹/ec2/cloudwatch/syslog
+
+---
+**Step 8: Create CloudWatch Alarm + SNS Notification**
+
+🔹Go to:
+
+**CloudWatch → Alarms → Create Alarm**
+
+🔹Select:
+
+**Metric: EC2 → CPUUtilization**
+
+🔹Condition: CPU > 70%
+
+🔹Action: SNS Topic (email notification)
+
+🔹Confirm SNS subscription from your email.
+
+---
+**Step 9: Create a CloudWatch Dashboard**
+
+**CloudWatch → Dashboards → Create Dashboard**
+
+Add widgets:
+
+🔹CPUUtilization
+
+🔹mem_used_percent
+
+🔹Disk used percent
+
+**🧪 Testing (Trigger Alarm)**
+
+Install stress tool:
+
+🔹sudo apt install -y stress
+
+🔹Generate CPU load:
+
+🔹stress --cpu 2 --timeout 180
+
+
+**Now verify:**
+
+🔹Alarm changes state to ALARM
+
+🔹Email notification received
+
+**Stop early**:
+
+pkill stress
+
+✅ Future Enhancements
+
+Add Nginx/Apache access logs monitoring
+
+Use Terraform for Infrastructure provisioning
+
+Auto-deploy via Jenkins pipeline
+
+Add anomaly detection alarms
+
+---
+👨‍💻 Author
+
+Vardhan Kandregula
+DevOps Engineer | AWS | CI/CD | Kubernetes | Monitoring
